@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mytasks</title>
+</head>
+<body>
+<div><h1>Things to do</h1></div>
+{{#list-of-items}}
+<ul><li>
+    Task: = &nbsp;{{task}} &nbsp; Completed: = &nbsp;{{completed}}
+</li>
+{{/list-of-items}}
+
+    <form action="/list" method="post">
+        <input type="text" placeholder="Enter task" name="todoitem"/>
+        <button type="submit">Submit</button>
+
+</ul>
+</body>
+</html>

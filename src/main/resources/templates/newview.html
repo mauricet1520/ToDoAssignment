@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>list</title>
+</head>
+<body>
+
+
+<ol type="1">
+    {{#list-of-items}}
+
+    <li>Task = {{task}} &nbsp; Completed = {{completed}}</li>
+
+    {{/list-of-items}}
+
+</ol>
+
+{{^list-of-items}}
+
+<p>No task created.</p>
+
+{{/list-of-items}}
+<div>
+    <form action="/list" method="post">
+        <input type="text" placeholder="Enter task" name="item"/>
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+<div>
+    <form action="/mark" method="post">
+        <input type="text" placeholder="Enter Completed task" name="quantity">
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+
+</body>
+</html>
