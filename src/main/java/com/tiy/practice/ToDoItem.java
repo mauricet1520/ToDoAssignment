@@ -11,15 +11,15 @@ public class ToDoItem implements Serializable {
     String task;
     boolean completed;
 
-
     public ToDoItem(String task, boolean completed) {
         this.task = task;
         this.completed = completed;
     }
 
-    public ToDoItem(Object todoitem){
+    public ToDoItem(Object todoitem) {
 
     }
+
     public String toString() {
         if (isCompleted()) {
             return task + " (completed)";
@@ -27,7 +27,6 @@ public class ToDoItem implements Serializable {
             return task;
         }
     }
-
 
     public String getTask() {
         return task;
@@ -44,8 +43,6 @@ public class ToDoItem implements Serializable {
     public void setCompleted(boolean completed) {
         this.completed = completed;
     }
-
-
 
 
 }
